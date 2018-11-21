@@ -12,10 +12,10 @@ public class CodeWordChecker implements StringChecker {
     public CodeWordChecker(String str){
     this.min=6;
     this.max=20;
-    this.not=not;
+    this.not=str;
     }
     public boolean isValid(String str) {
-        if (str.length() < min && str.length() > max && str.indexOf(not) != -1) {
+        if (str.length() < min || str.length() > max || str.indexOf(not) != -1) {
             return false;
         }
         else
